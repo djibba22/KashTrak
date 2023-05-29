@@ -11,7 +11,6 @@ import { NoMatch } from './NoMatch';
 function App() {
   return (
     <div>
-    <h1>KashTrak</h1>
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />

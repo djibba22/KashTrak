@@ -6,23 +6,14 @@ import http from 'http';
 import cors from 'cors';
 import bodyParser from 'body-parser';
 import path from 'path';
+import { resolvers,typeDefs } from './schemas/index.js';
 import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// The GraphQL schema
-const typeDefs = `#graphql
-  type Query {
-    hello: String
-  }
-`;
 
-// A map of functions which return data for the schema.
-const resolvers = {
-  Query: {
-    hello: () => 'world',
-  },
-};
+
+
 
 const app = express();
 const httpServer = http.createServer(app);
