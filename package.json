@@ -1,0 +1,19 @@
+{
+    "name": "kashtrak",
+    "version": "1.0.0",
+    "description": "",
+    "main": "api/app.js",
+    "scripts": {
+        "start": "node api/app.js",
+        "start:dev": "concurrently \"cd api && npm run watch\" \"cd client && npm start\"",
+        "install": "cd api && npm i && cd ../client && npm i",
+        "seed": "cd api && npm run seed",
+        "build": "cd client && npm run build"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "concurrently": "^8.0.1"
+    }
+}
